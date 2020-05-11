@@ -1,0 +1,238 @@
+:root {
+    --color: #400082;
+    --bg-color: #f9f9f9;
+    --hover-bg-color: #e9e9e9;
+    --muted-color: #999;
+    --warning-color: #e71010;
+    --bold: 700;
+    --line-height: 24px;
+    --text-transform-heading: uppercase;
+    --border-color-light: #ccc;
+    --border-radius: 6px;
+    --page-width: 896px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*{    
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--body-bg-color);
+
+}
+
+body, input, button, select, textarea {
+    font-size: 16px;
+    line-height: var(--line-height);
+}
+
+.header {
+    padding-top: 80px;
+    text-align: center;
+    color: var(--bg-color);
+    background-color: var(--color);
+}
+
+.logo-image{
+    width: 40px;
+    height: auto;
+}
+
+.column {
+    max-width: var(--page-width);
+    margin: 0 auto 200px;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 8px;
+    padding-bottom: 100px;
+}
+
+.sidebar {
+    display: none;
+}
+
+.nav {
+    position: sticky;
+    top: 48px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 48px;
+    margin-right: 32px;
+    border-right: 2px dotted var(--border-color-light);
+    text-align: right;
+}
+
+.nav-list {
+    margin-right: 16px;
+    padding: 0;
+    text-align: right;
+    list-style: none;
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 6px 16px;
+    line-height: var(--line-height);
+    color: var(--muted-color);
+    font-weight: var(--bold);
+    border-radius: var(--border-radius);
+    font-size: 18px;
+}
+
+.nav-link:hover {
+    color: var(--color);
+    background-color: var(--hover-bg-color);
+}
+
+nav li {
+    padding: 3px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+section {
+    border-bottom: 2px dotted var(--border-color-light);
+    padding-bottom: 32px;
+    text-align: center;
+}
+
+h2 {
+    color: var(--color);
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 25px;
+    text-align: center;
+}
+
+
+h3 {
+    color: var(--color);
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+/*  ---------Julius--------- */
+.warning-p{
+    color: var(--warning-color);
+    display: none;
+}
+
+table{
+    width: 100%;
+    text-align: center;
+    color: var(--bg-color);
+    background-color: var(--color);
+    padding: 6px 16px;
+    border-radius: var(--border-radius);
+    border-spacing: 5px;
+}
+
+.image-preview{
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--color);
+}
+
+.centered{
+    text-align: center;
+}
+/* --------------------- */
+
+.text-input {
+    width: 60%;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--muted-color);
+    display: inline-block;  
+}
+
+.upload-button {
+    cursor: pointer;
+    color: var(--bg-color);
+    background-color: var(--color);
+    padding: 6px 16px;
+    border-radius: var(--border-radius);
+}
+
+.upload-button [type=file],[type=button] {
+    display: none;
+}
+
+.upload-button:hover{
+    background-color: var(--hover-bg-color);
+    color: var(--color);
+}
+
+p{
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.credits{
+    display: flex;
+    justify-content: space-between;
+}
+
+.credit{
+    max-width: 30%;
+}
+
+.credit img{
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--color);
+}
+
+.credits p{
+    font-weight: var(--bold);
+    text-align: center;
+}
+
+
+
+/* Desktop */
+@media (min-width: 720px){
+    .logo-image{
+        width: 60px;
+    }
+    .header {
+        text-align: left;
+    }
+    .sidebar {
+        display: block;
+    }
+    section{
+        text-align: left;
+    }
+    .column {
+        display: flex;  
+    }
+    h1 {
+        font-size: 70px;
+        letter-spacing: 11px;
+    }
+    h2, h3, p{
+        text-align: left;
+    }
+}
+

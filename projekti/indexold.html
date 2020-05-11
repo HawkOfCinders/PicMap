@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>file API</title>
+    <script src="node_modules/exif-js/exif.js"></script>
+   <script src="node_modules/OpenLayers.js"></script>
+
+</head>
+<body>
+<form name="uploadForm">
+    <div>
+        <input type="file" id="uploadInput" single>
+    </div>
+</form>
+<div id="pictureMap" style="height:500px; width: 500px"></div>
+<img id="imageOutput" style="height:500px; width: auto">
+<p id="date">Date</p>
+<p id="weatherState">Weather state</p>
+<p id="weatherTemperature">Tempature</p>
+<p id="weatherHumidity"Humidity>Humidity</p>
+<p id="weatherWindDirectionCompass">Wind direction</p>
+<p id="weatherWindSpeed">Wind speed</p>
+<p id="latitude">Latitude:</p>
+<p id="longitude">Longitude</p>
+<p id="size">Image size</p>
+<p id="resolution">Resolution</p>
+<script src="js/file.js"></script>
+</body>
+</html>

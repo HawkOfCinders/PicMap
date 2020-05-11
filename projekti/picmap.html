@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Home</title>
+    <script src="node_modules/exif-js/exif.js"></script>
+    <script src="node_modules/OpenLayers.js"></script>
+</head>
+<body>
+    <header class="header">
+                <h1 class="logo">PICMAP <img src="https://www.freelogovectors.net/wp-content/uploads/2020/03/google-maps-logo.png" class="logo-image"alt="logo"></h1>
+    </header>
+
+    <div class="main">
+        <div class="column">
+            <div class="sidebar">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-list-item">
+                            <a href="#upload" class="nav-link">Upload</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="#result" class="nav-link">Result</a>
+                        </li>
+                        <li class="nav-list-item">
+                            <a href="#about" class="nav-link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="content">
+
+                <section class="upload-section" id="upload">
+                    <h2>Upload</h2>
+                    <p>Picmap fetches the location data included in pictures and displays it on a map. Additionally, Picmap shows the state of the weather when the image was taken.</p>                 
+                    <div class="file-div">
+                        <input type="text" class="text-input">
+                        <label class="upload-button">
+                            Browse
+                            <input id="uploadInput" type="file" name="img" accept="image/*">
+                        </label>
+                    </div>
+                    <p id="warning" class="warning-p">Image has no location data.</p>
+                </section>
+
+                <section class="result-section"  id="result">
+                    <h2>Result</h2>
+
+                    <h3>Image</h3>
+                    <div class="centered">
+                        <img id="imageOutput" class="image-preview" src="images/image%20preview.jpg" alt="placeholder">
+                    </div>
+                    
+                    <h3>Data</h3>
+                    <table class="taulukko">
+                        <tr class="container">
+                            <th>Latitude</th>
+                            <th>Longitude</th>
+                            <th>Size</th>
+                            <th>Resolution</th>
+                        </tr>
+                        <tr class="container">
+                            <td id="latitude"></td>
+                            <td id="longitude"></td>
+                            <td id="size"></td>
+                            <td id="resolution"></td>
+                        </tr>
+                    </table>
+
+                    <h3>Map</h3>
+                    <div class="centered">
+                        <div onmouseenter="stopScroll()" onmouseleave="startScroll()" id="pictureMap" class="image-preview" style="height: 500px"></div>
+                    </div>
+
+                    <h3>Weather</h3>
+                    <table class="taulukko">
+                        <tr class="container">
+                            <th>Weather state</th>
+                            <th>Temperature</th>
+                            <th>Wind direction</th>
+                            <th>Wind speed</th>
+                        </tr>
+                        <tr class="container">
+                            <td id="weatherState"></td>
+                            <td id="weatherTemperature"></td>
+                            <td id="weatherWindDirectionCompass"></td>
+                            <td id="weatherWindSpeed"></td>
+                        </tr>
+                    </table>
+                </section>
+
+                <section class="about-section" id="about">
+                    <h2>About</h2>
+                    <p>Made for fun by these 3 fools:</p>
+                    <div class="credits">
+                        <div class="credit">
+                            <img src="https://api.adorable.io/avatars/150/heikki" alt="Heikki">
+                            <p>Heikki</p>
+                        </div>
+                        <div class="credit">
+                            <img src="https://api.adorable.io/avatars/150/JULIUUUS" alt="Julius">
+                            <p>Julius</p>
+                        </div>
+                        <div class="credit">
+                            <img src="https://api.adorable.io/avatars/150/MiikAAA" alt="Miika">
+                            <p>Miika</p>
+                        </div>
+                    </div>
+                </section>               
+            </div>
+        </div>
+    </div>
+    <header class="header">Weather information fetched from <a href="https://www.metaweather.com/" style="color:white">MetaWeather</a></header>
+    <script src="js/file.js"></script>
+</body>
+</html>
